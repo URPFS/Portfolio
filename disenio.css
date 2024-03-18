@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/* Estilos para el contenedor */
+.container {
+  position: relative; /* Asegura que los elementos internos se posicionen correctamente */
+}
+
+/* Estilos para el header */
+
+#cabeza {
+  display: grid;
+  place-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: rgba(1, 1, 1, 0.85);
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#cabeza ul {
+  display: grid;
+  gap: 25px;
+  grid-auto-flow: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 40px;
+}
+
+#cabeza li {
+  color: hsl(208, 61%, 37%);
+  transition: background-color 0.3s ease, font-size 0.3s ease;
+  border-radius: 25px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+#cabeza li:hover {
+  cursor: pointer;
+  background-color: rgb(24, 64, 109, 0.9);
+  border-radius: 18px;
+  font-size: 45px;
+}
+
+/* Estilos para el artículo */
+#li1 {
+  margin-top: 20px; /* Ajusta según sea necesario */
+  color: aliceblue;
+}
+
+/*FIN DE LOS ESTILOS DEL HEADER*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+body {
+  background-color: rgb(1, 1, 1, 0.96);
+}
