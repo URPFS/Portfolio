@@ -1,59 +1,50 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-/*////////////////////////////////////////////////////////////////////////*/
-
-/* Estilos para el contenedor */
-.container {
-  position: relative; /* Asegura que los elementos internos se posicionen correctamente */
+body {
+  background-color: #1e1d21;
 }
 
-/* Estilos para el header */
-
-#cabeza {
-  display: grid;
-  place-items: center;
-  justify-content: flex-start;
-  align-items: flex-end;
-  background-color: rgba(1, 1, 1, 0.85);
-
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+/*HEAD*/
+#cabeza ul li {
+  list-style: none;
+  color: #cd1e22;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  transition: font-size 0.5s ease;
 }
 
 #cabeza ul {
   display: grid;
-  gap: 25px;
-  grid-auto-flow: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-size: 40px;
+  position: absolute;
+  top: 2%;
+  left: 39%;
+  transform: translateX(-50%);
+  grid-template-columns: 35% 35% 35% 35%;
 }
 
-#cabeza li {
-  color: hsl(208, 61%, 37%);
-  transition: background-color 0.3s ease, font-size 0.3s ease;
-  border-radius: 25px;
-  margin-left: 30px;
-  margin-bottom: 15px;
-}
-
-#cabeza li:hover {
+#cabeza ul li:hover {
   cursor: pointer;
-  background-color: rgb(24, 64, 109, 0.9);
-  border-radius: 18px;
-  font-size: 45px;
-}
 
-/* Estilos para el artículo */
-#li1 {
-  margin-top: 20px; /* Ajusta según sea necesario */
+  font-size: 42px;
+}
+/*FIN DEL HEAD*/
+
+#titulo {
+  /*es eso grande que vez cuando entras a la pagina*/
+  position: absolute;
+  top: 30%;
+  font-size: 380%;
+  font-family: "Lato", sans-serif;
+  color: #9f391a;
+  left: 27%;
+  transform: translateX(-20%);
+}
+#art1 {
+  position: absolute;
+  top: 160%;
   color: aliceblue;
-}
-
-/*FIN DE LOS ESTILOS DEL HEADER*/
-/*/////////////////////////////////////////////////////////////////////////////*/
-body {
-  background-color: rgb(1, 1, 1, 0.96);
+  font-size: 50px;
 }
