@@ -1,50 +1,55 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #1e1d21;
+  overflow-x: hidden;
 }
 
-/*HEAD*/
-#cabeza ul li {
-  list-style: none;
-  color: #cd1e22;
-  font-size: 40px;
-  font-family: "Montserrat", sans-serif;
-  transition: font-size 0.5s ease;
+#cabeza {
+  position: fixed;
+  top: 2%;
+  left: 1%;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
 }
 
 #cabeza ul {
-  display: grid;
-  position: absolute;
-  top: 2%;
-  left: 39%;
-  transform: translateX(-50%);
-  grid-template-columns: 35% 35% 35% 35%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3%;
+  background-color: black;
+}
+
+#cabeza ul li {
+  color: #b3bbb9;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  transition: font-size 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+  list-style: none;
 }
 
 #cabeza ul li:hover {
-  cursor: pointer;
-
-  font-size: 42px;
+  color: #b63b41;
+  font-size: 28px;
 }
-/*FIN DEL HEAD*/
 
 #titulo {
-  /*es eso grande que vez cuando entras a la pagina*/
   position: absolute;
   top: 30%;
   font-size: 380%;
   font-family: "Lato", sans-serif;
   color: #9f391a;
-  left: 27%;
-  transform: translateX(-20%);
 }
+
 #art1 {
   position: absolute;
-  top: 160%;
+  top: 2000px;
   color: aliceblue;
   font-size: 50px;
 }
