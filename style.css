@@ -1,0 +1,215 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Utiliza la fuente importada */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  cursor: default;
+  background-color: #282828;
+}
+
+aside {
+  width: 200px;
+  height: 100vh; /* Asegura que el aside ocupe toda la altura de la pantalla */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1E191C;
+  
+  padding: 20px;
+  overflow-y: auto; /* Permite el scroll si el contenido excede la altura del aside */
+  text-align: center;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  margin-left: 220px; /* Deja espacio para el aside */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+}
+
+.seccion {
+  margin: 20px 0;
+  position: relative; /* Asegura que los elementos hijos con posición absoluta se posicionen relativamente a esta sección */
+}
+
+.Title {
+  display: inline-block;
+  position: relative;
+  color: #00B8D4;
+  font-family: 'Lato', sans-serif; /* Utiliza la fuente importada */
+  margin-left: 30px;
+}
+
+.Title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: #55dd89; /* Color del subrayado */
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.Title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.texto {
+  font-family: 'Gupter', sans-serif; /* Corrige el nombre de la fuente */
+  font-size: 26px;
+  color: #fffefba9;
+  margin-left: 40px; /* Deja espacio suficiente para la imagen */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', 'Roboto', sans-serif; /* Utiliza las fuentes importadas */
+  color: #00B8D4;
+  font-size: 23px;
+  transition: color 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+}
+
+ul li {
+  list-style: none;
+  margin: 13px 0;
+}
+
+a:hover {
+  color: #8A2BE2;
+  font-size: 26px;
+}
+
+#img1 {
+  margin: 45px 0 50px 0;
+  border-radius: 12px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#firstcolor{
+  font-size: 70px;
+
+}
+
+#secondcolor{
+  font-size: 70px;
+  color: #39FF14;
+}
+
+#contacto1 {
+  position: relative;
+  display: inline-block;
+  color: #39FF14;
+  font-size: 23px;
+  text-decoration: none; /* Asegúrate de que no haya subrayado por defecto */
+}
+
+#contacto1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #39FF14;
+  transition: width 0.3s ease; /* Ajusta el tiempo y la curva de la transición a tu gusto */
+}
+
+#contacto1:hover::after {
+  width: 100%;
+}
+
+span{
+  color: #39FF14;
+}
+
+#Title-Frontend{
+  color: #39FF14;
+  font-size: 55px;
+  margin-left: 170px;
+}
+
+#Title-Backend{
+  color: #8A2BE2;
+  font-size: 55px;
+  position: absolute;
+  left: 670px;
+  top: 0px;
+}
+
+.Frontend-skill{
+  
+  color: #282828;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border: 3px solid #39FF14;
+  background-color: #8A2BE2;
+  font-size: 25px;
+  margin: 10px 220px;
+  text-align: center;
+}
+
+.Backend-skill{
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border: 3px solid #8A2BE2;
+
+  color: #282828;
+  border-radius: 10px;
+  background-color: #39FF14;
+  font-size: 25px;
+  margin: 10px 220px;
+  text-align: center;
+  position: relative;
+  left: 500px;
+  top: -198px;
+
+}
+
+#separator{
+  position: absolute;
+  left: 65%;
+  top: 180px;
+  width: 60%;
+  height: 4px;
+  background-color:#00B8D4;
+  transform: rotate(90deg); 
+  border: none;
+}
+
+.Move-Zone2 {
+  width: 300px; /* Ancho de la zona */
+  height: 300px; /* Altura de la zona */
+  border: 2px solid #000;
+  position: absolute;
+  overflow: hidden; /* Oculta las imágenes que salen de la zona */
+}
+
+.movable-image {
+  width: 60px; /* Asegura que las imágenes no superen los 60px */
+  height: 30px;
+  position: absolute; /* Permite mover las imágenes dentro de la zona */
+  transition: transform 0.1s linear; /* Suaviza la transición entre movimientos */
+}
